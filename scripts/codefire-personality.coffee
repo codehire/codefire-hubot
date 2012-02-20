@@ -44,23 +44,23 @@ module.exports = (robot) ->
   robot.hear new RegExp("\\s*" + shut_up.source + ",? hubot\\.*\\s*$", "i"), respond_to_shut_up
 
   thanks = /(thanks|thank you|cheers|nice one|ta|ty|thx|good job|nice job|great job|you rock)/i
-  robot.respond new RegExp(thanks.source + "\\s*$"), respond_to_thanks
+  robot.respond new RegExp(thanks.source + "\\s*$", "i"), respond_to_thanks
   robot.hear new RegExp("\\s*" + thanks.source + "( for .+)?,? hubot\\.*\\s*$", "i"), respond_to_thanks
 
   hello = /(hi|hello|gday|g'day|what's up|whats up|what up|sup|hey|hiya|heya|yo|mornin|mornin'|morning|good morning|afternoon|good afternoon|wotcher)/i
-  robot.respond new RegExp(hello.source + "\\s*$"), respond_to_hello
+  robot.respond new RegExp(hello.source + "\\s*$", "i"), respond_to_hello
   robot.hear new RegExp("\\s*" + hello.source + ",? hubot\\.*\\s*$", "i"), respond_to_hello
 
   goodbye = /(bye|goodbye|good-bye|bye-bye|see you|see you later|see ya|cya|later|evening|good evening|night|good night|goodnight|have a good one)/i
-  robot.respond new RegExp(goodbye.source + "\\s*$"), respond_to_goodbye
+  robot.respond new RegExp(goodbye.source + "\\s*$", "i"), respond_to_goodbye
   robot.hear new RegExp("\\s*" + goodbye.source + ",? hubot\\.*\\s*$", "i"), respond_to_goodbye
 
   love = /(i( \S+)? love you)/i
-  robot.respond new RegExp(love.source + "\\s*$"), respond_to_love
+  robot.respond new RegExp(love.source + "\\s*$", "i"), respond_to_love
   robot.hear new RegExp("\\s*" + love.source + ",? hubot\\.*\\s*$", "i"), respond_to_love
 
   apology = /(sorry|I'm sorry)/i
-  robot.respond new RegExp(apology.source + "\\s*$"), respond_to_apology
+  robot.respond new RegExp(apology.source + "\\s*$", "i"), respond_to_apology
   robot.hear new RegExp("\\s*" + apology.source + ",? hubot\\.*\\s*$", "i"), respond_to_apology
 
   # Build messages.
