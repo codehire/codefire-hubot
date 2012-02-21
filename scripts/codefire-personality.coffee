@@ -37,6 +37,9 @@ module.exports = (robot) ->
   respond_to_apology = (msg) ->
     msg.reply msg.random ["No problem.", "That's okay.", "No biggie.", "Think nothing of it."]
 
+  respond_to_insult = (msg) ->
+    msg.reply msg.random ["Excuse me?", "...", "Wow, you're a clever one.", "Robots have feelings too, you know.", "Same to you, pal.", "WOW, BIG MAN"]
+
   # Conversational stuff.
 
   shut_up = /(shut up|shut the (\w+) up|shut it|be quiet|quiet|stfu|shutup)/i
@@ -62,6 +65,10 @@ module.exports = (robot) ->
   apology = /(sorry|I'm sorry)/i
   robot.respond new RegExp(apology.source + "\\s*$", "i"), respond_to_apology
   robot.hear new RegExp("\\s*" + apology.source + ",? hubot\\.*\\s*$", "i"), respond_to_apology
+
+  insult = /(fuck you|screw you|damn you|fuck off)/i
+  robot.respond new RegExp(insult.source + "\\s*$", "i"), respond_to_insult
+  robot.hear new RegExp("\\s*" + insult.source + ",? hubot\\.*\\s*$", "i"), respond_to_insult
 
   # Build messages.
   
