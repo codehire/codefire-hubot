@@ -122,8 +122,11 @@ Documents/     Library/       Pictures/      manifesto.txt"
   robot.hear /^\s*(landed|land(ed)? +it)\s*[?.!]*\s*$/i, (msg) ->
     msg.send "http://catholicpilot.com/wp-content/uploads/2010/07/Frenchcrosswindtechnique.jpg"
 
+  DISAPPROVAL_IMAGES = ['http://www.nobelprize.org/nobel_prizes/literature/laureates/1953/churchill.jpg',
+                        'http://www.themarysue.com/wp-content/uploads/2011/11/look-of-disapproval-lisa-300x288.jpg']
+
   robot.hear /^\s*(i +)?disapprov(e|al)\s*[?.!]*\s*$/i, (msg) ->
-    msg.send "http://www.themarysue.com/wp-content/uploads/2011/11/look-of-disapproval-lisa-300x288.jpg"
+    msg.send msg.random DISAPPROVAL_IMAGES
 
   robot.hear /^\s*(i +)?approv(e|al)\s*[?.!]*\s*$/i, (msg) ->
     msg.send "http://3.bp.blogspot.com/_T1FQu5_6WZs/TDE-7UiGk0I/AAAAAAAAAKM/X_-2kM7ZdXM/s1600/chuck_norris_approved.jpg"
