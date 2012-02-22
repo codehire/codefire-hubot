@@ -129,7 +129,10 @@ Documents/     Library/       Pictures/      manifesto.txt"
     msg.send msg.random DISAPPROVAL_IMAGES
 
   robot.hear /^\s*(i +)?approv(e|al)\s*[?.!]*\s*$/i, (msg) ->
-    msg.send "http://3.bp.blogspot.com/_T1FQu5_6WZs/TDE-7UiGk0I/AAAAAAAAAKM/X_-2kM7ZdXM/s1600/chuck_norris_approved.jpg"
+    msg.send 'http://3.bp.blogspot.com/_T1FQu5_6WZs/TDE-7UiGk0I/AAAAAAAAAKM/X_-2kM7ZdXM/s1600/chuck_norris_approved.jpg'
 
   robot.hear /^\s*cruis(?:e|ing|in'|in)\s*[?.!]*\s*$/i, (msg) ->
-    msg.send "http://media1.onsugar.com/files/2011/05/21/4/301/3019466/f56f5cf65e876972_tom-cruise.larger/i/Oprah-Meltdowns.jpg"
+    msg.send 'http://media1.onsugar.com/files/2011/05/21/4/301/3019466/f56f5cf65e876972_tom-cruise.larger/i/Oprah-Meltdowns.jpg'
+
+  robot.hear /^\s*thunder:? +stolen\s*[?.!]*\s*$/i, (msg) ->
+    msg.send 'http://3.bp.blogspot.com/-rJnhZDPDpHI/TcXf6JvnNaI/AAAAAAAADgU/pPfWBv8rUd0/s1600/photo-12.jpg'
