@@ -136,3 +136,6 @@ Documents/     Library/       Pictures/      manifesto.txt"
 
   robot.hear /^\s*thunder:? +stolen\s*[?.!]*\s*$/i, (msg) ->
     msg.send 'http://3.bp.blogspot.com/-rJnhZDPDpHI/TcXf6JvnNaI/AAAAAAAADgU/pPfWBv8rUd0/s1600/photo-12.jpg'
+
+  robot.hear /\bnyan\b/i, (msg) ->
+    msg.send "http://msnsmileys.net/n/smileys/Nyan_Cat/Animated_Nyan_Cat.gif"
