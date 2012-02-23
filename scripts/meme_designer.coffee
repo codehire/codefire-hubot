@@ -68,6 +68,9 @@ module.exports = (robot) ->
     pissedoffobama:
       generator: 9470
       image: 45557
+    scumbagsteve:
+      generator: 142
+      image: 366130
 
   robot.respond /(list )?memes?$/i, (msg) ->
     names = []
