@@ -1,3 +1,0 @@
-#!/bin/bash
-
-watch -n 120 "curl -d '' http://codefire-hubot.herokuapp.com/hubot/ping"
