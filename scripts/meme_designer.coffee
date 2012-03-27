@@ -71,6 +71,9 @@ module.exports = (robot) ->
     scumbagsteve:
       generator: 142
       image: 366130
+    paranoidparrot:
+      generator: 112
+      image: 1132
 
   robot.respond /(list )?memes?$/i, (msg) ->
     names = []
